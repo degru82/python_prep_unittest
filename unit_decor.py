@@ -11,8 +11,11 @@ def dum_decor(func):
 
 def unit_decor(func):
     def wrapper(*args, **kwargs):
-        filename = os.path.basename(__file__)
-        with open('unit_log_'+filename+'.txt', 'a') as f:
+        modname = func.__module__
+        funcname = func.__name__
+
+        logfile_name = 'testcase_unit__' + modname + '__' + funcname + '.txt'
+        with open(logfile_name, 'a') as f:
             str_to_record = ''
 
             actual_result = func(*args, **kwargs)

@@ -21,4 +21,6 @@ def a_func(sng_param, arr_param, dict_param, key1=None, key2=8):
     return sum
 
 
-a_func(1, [2, 3, 4], {'a': 5, 'b': 6}, key1=7)
+@unit_decor
+def b_func(a, b):
+    return a+b

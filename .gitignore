@@ -1,0 +1,7 @@
+__pycache__
+.vscode
+calc.*
+*pyc
+prime.*
+test_calc*
+testcase*txt
